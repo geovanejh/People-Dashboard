@@ -53,7 +53,7 @@ const EnderecoForm = ({ formik, pessoas }) => {
       <FormField
         id="rua"
         type="text"
-        label="Rua"
+        label="Rua*"
         onChange={formik.handleChange}
         value={formik.values.rua}
         onBlur={formik.handleBlur}
