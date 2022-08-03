@@ -20,17 +20,17 @@ const PeopleListItem = ({ person, handleDelete, handleEdit }) => {
 
   return (
     <ListItem layout="1.5fr 1.5fr 1fr 1fr 1fr 0.5fr">
-      <div>
+      <div onClick={() => navigate(`/detalhes/${person.idPessoa}`)}>
         <img src={imgPlaceholder} alt="" />
         <p>{person.nome}</p>
       </div>
-      <div>
+      <div onClick={() => navigate(`/detalhes/${person.idPessoa}`)}>
         <p>{person.email}</p>
       </div>
-      <div>
+      <div onClick={() => navigate(`/detalhes/${person.idPessoa}`)}>
         <p>{formata(person.cpf)}</p>
       </div>
-      <div>
+      <div onClick={() => navigate(`/detalhes/${person.idPessoa}`)}>
         <p>{date}</p>
       </div>
       <div>

@@ -8,7 +8,7 @@ import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css";
 import Loading from "../../components/Loading/Loading";
 import { ListPage } from "../../components/ListPages/ListPage";
-import { ListPageHeader } from "../../components/ListPages/ListPageHeader";
+import ListPageHeader from "../../components/ListPages/ListPageHeader/ListPageHeader";
 import { ListPageContainer } from "../../components/ListPages/ListPageContainer";
 import SearchField from "../../components/Form/SearchField/SearchField";
 
@@ -93,13 +93,7 @@ const People = () => {
   return (
     <ListPage>
       {loading && <Loading />}
-      <ListPageHeader>
-        <h1>Usuários</h1>
-        <div>
-          <p>Geovane Hartmann</p>
-          <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png" alt="" />
-        </div>
-      </ListPageHeader>
+      <ListPageHeader title="Pessoas" user="Geovane Hartmann" />
       <ListPageContainer layout="1.5fr 1.5fr 1fr 1fr 1fr 0.5fr">
         <div>
           <SearchField

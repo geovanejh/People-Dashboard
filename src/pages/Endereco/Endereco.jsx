@@ -10,7 +10,7 @@ import { toast } from "react-hot-toast";
 import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css";
 import { ListPage } from "../../components/ListPages/ListPage";
-import { ListPageHeader } from "../../components/ListPages/ListPageHeader";
+import ListPageHeader from "../../components/ListPages/ListPageHeader/ListPageHeader";
 import { ListPageContainer } from "../../components/ListPages/ListPageContainer";
 
 function Endereco() {
@@ -106,13 +106,7 @@ function Endereco() {
     <Loading />
   ) : (
     <ListPage>
-      <ListPageHeader>
-        <h1>Endereços</h1>
-        <div>
-          <p>Geovane Hartmann</p>
-          <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png" alt="" />
-        </div>
-      </ListPageHeader>
+      <ListPageHeader title="Endereços" user="Geovane Hartmann" />
       <ListPageContainer layout="1fr 0.5fr 1fr 0.5fr 1fr 0.5fr">
         <div>
           <SelectField

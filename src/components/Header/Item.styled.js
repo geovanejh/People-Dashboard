@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Linha = styled.li`
-  padding: 0 32px;
+  padding: ${(props) => (props.active ? "0 29px" : "0 32px")};
   background-color: ${(props) => (props.active ? "#3E4049" : "")};
   border-left: ${(props) => (props.active ? "3px solid #DDE2FF" : "none")};
 

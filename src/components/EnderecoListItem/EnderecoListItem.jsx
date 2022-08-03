@@ -3,7 +3,7 @@ import { RiDeleteBinFill } from "react-icons/ri";
 import { FiEdit } from "react-icons/fi";
 import { ListItem } from "../FlatList/ListItem";
 
-const EnderecoListItem = ({ rua, cidade, numero, estado, cep, handleEdit, handleDelete, id, layout }) => {
+const EnderecoListItem = ({ tipo, rua, cidade, numero, estado, cep, handleEdit, handleDelete, id, layout }) => {
   return (
     <ListItem layout={layout}>
       <div>{rua}</div>
@@ -12,10 +12,10 @@ const EnderecoListItem = ({ rua, cidade, numero, estado, cep, handleEdit, handle
       <div>{estado}</div>
       <div>{cep}</div>
       <div>
-        <Button onClick={() => handleEdit(id)} border="none" background="transparent" fontSize="20px">
+        <Button onClick={() => handleEdit(id, tipo)} border="none" background="transparent" fontSize="20px">
           <FiEdit />
         </Button>
-        <Button onClick={() => handleDelete(id)} border="none" background="transparent" fontSize="20px">
+        <Button onClick={() => handleDelete(id, tipo)} border="none" background="transparent" fontSize="20px">
           <RiDeleteBinFill />
         </Button>
       </div>

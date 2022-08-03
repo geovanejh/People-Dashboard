@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-export const ListPageHeader = styled.div`
+export const PageHeader = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 58px;
+  margin-bottom: 30px;
   > h1 {
     font-weight: 700;
     font-size: 24px;

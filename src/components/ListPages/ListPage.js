@@ -5,4 +5,7 @@ export const ListPage = styled.div`
   padding: 30px;
   min-height: 100vh;
   background-color: #f7f8fc;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 `;

@@ -11,6 +11,9 @@ import People from "./pages/People/People";
 import UserForm from "./pages/UserForm/UserForm";
 import Users from "./pages/Register/Register";
 import { MainContent, RouterContainer } from "./Routers.styled";
+import Contato from "./pages/Contato/Contato";
+import DetalhesPessoa from "./pages/DetalhesPessoa/DetalhesPessoa";
+import ContatoCrudPage from "./pages/ContatoCrudPage/ContatoCrudPage";
 
 function App() {
   const { auth } = useContext(AuthContext);
@@ -36,6 +39,11 @@ function App() {
               <Route path="/endereco/form" element={<EnderecoCrudPage />} />
               <Route path="/endereco/form/idPessoa=:id" element={<EnderecoCrudPage />} />
               <Route path="/endereco/form/idEndereco=:id" element={<EnderecoCrudPage />} />
+              <Route path="/contato/" element={<Contato />} />
+              <Route path="/contato/:id" element={<Contato />} />
+              <Route path="/contato/form/idPessoa=:id" element={<ContatoCrudPage />} />
+              <Route path="/contato/form/idContato=:id" element={<ContatoCrudPage />} />
+              <Route path="/detalhes/:id" element={<DetalhesPessoa />} />
             </>
           )}
           <Route path="*" element={<NotFound />}></Route>

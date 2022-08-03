@@ -6,7 +6,7 @@ import { BiCurrentLocation } from "react-icons/bi";
 import { MdLogout } from "react-icons/md";
 import { IoPerson } from "react-icons/io5";
 import { useLocation } from "react-router-dom";
-import { Button } from "../../components/Button/Button.styled.js";
+import { RiContactsFill } from "react-icons/ri";
 
 const Menu = () => {
   const { handleLogout, auth } = useContext(AuthContext);
@@ -22,14 +22,20 @@ const Menu = () => {
           </>
         ) : (
           <>
+            {/* <Item
+              name="Contatos"
+              url="/contato"
+              icon={<RiContactsFill />}
+              active={caminho.includes("/contato") ? "active" : ""}
+            /> */}
             <Item
-              name="Endereço"
+              name="Endereços"
               url="/endereco"
               icon={<BiCurrentLocation />}
               active={caminho.includes("/endereco") ? "active" : ""}
             />
             <Item
-              name="Pessoa"
+              name="Pessoas"
               url="/people"
               icon={<IoPerson />}
               active={caminho.includes("/people") ? "active" : ""}

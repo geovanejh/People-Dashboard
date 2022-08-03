@@ -67,7 +67,7 @@ const EnderecoCrudPage = () => {
     setLoading(true);
     try {
       await usersApi.post(`/endereco/${formik.values.proprietario}?idPessoa=${formik.values.proprietario}`, endereco);
-      navigate(`/endereco/${formik.values.proprietario}`);
+      navigate(-1);
       toast.success("Endereço cadastrado com sucesso!");
     } catch (error) {
       toast.error("Um erro aconteceu, tente novamente.");
@@ -80,7 +80,7 @@ const EnderecoCrudPage = () => {
     try {
       await usersApi.put(`/endereco/${id}`, { ...obj, idPessoa: pessoas[0].id });
       toast.success("Endereço alterado com sucesso!");
-      navigate(`/endereco/${pessoas[0].id}`);
+      navigate(-1);
     } catch (error) {
       toast.error("Um erro aconteceu, tente novamente.");
     }
@@ -131,6 +131,7 @@ const EnderecoCrudPage = () => {
     <Loading />
   ) : (
     <FormContainer>
+      <button onClick={() => navigate(-1)}>voltar</button>
       <EnderecoForm formik={formik} pessoas={pessoas} caminho={caminho}></EnderecoForm>
     </FormContainer>
   );
